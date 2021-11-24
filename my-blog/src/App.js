@@ -4,10 +4,12 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ArticlePage from "./pages/ArticlePage";
 import ArticlesList from "./pages/ArticlesList";
+import NavBar from "./NavBar";
 function App() {
   return (
     <Router>
       <div className="App">
+        <NavBar/>
         <div id="page-body">
           <Routes>
             <Route path={"/"} exact element={<HomePage />} />

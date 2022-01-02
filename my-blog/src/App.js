@@ -5,6 +5,7 @@ import AboutPage from "./pages/AboutPage";
 import ArticlePage from "./pages/ArticlePage";
 import ArticlesListPage from "./pages/ArticlesListPage";
 import NavBar from "./NavBar";
+import NotFoundPage from "./pages/NotFoundPage";
 function App() {
   return (
     <Router>
@@ -12,10 +13,11 @@ function App() {
         <NavBar />
         <div id="page-body">
           <Routes>
-            <Route path={"/"} exact element={<HomePage />} />
-            <Route path={"/about"} element={<AboutPage />}/>
-            <Route path={"/articles-list"} exact element={<ArticlesListPage />} />
-            <Route path={"/article/:name"} exact element={<ArticlePage />} />
+              <Route path={"/"} exact element={<HomePage />} />
+              <Route path={"/about"} element={<AboutPage />} />
+              <Route path={"/articles-list"} exact element={<ArticlesListPage />} />
+              <Route path={"/article/:name"} exact element={<ArticlePage />} />
+              <Route path={"*"} element={<NotFoundPage />} />
           </Routes>
         </div>
       </div>

@@ -9,13 +9,13 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar/>
+        <NavBar />
         <div id="page-body">
           <Routes>
             <Route path={"/"} exact element={<HomePage />} />
-            <Route path={"/about"} element={<AboutPage />} />
+            <Route path={"/about"} element={<AboutPage />}/>
             <Route path={"/articles-list"} exact element={<ArticlesList />} />
-            <Route path={"/article"} exact element={<ArticlePage />} />
+            <Route path={"/article/:name"} exact element={<ArticlePage />} />
           </Routes>
         </div>
       </div>
